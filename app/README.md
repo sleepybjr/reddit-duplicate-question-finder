@@ -7,7 +7,7 @@ It is a configurable tool which allows the use for extension of plugins for thre
 3. Summary
 
 ### Query
-The query function takes an input from a Reddit post and generate a query string or questions to provide the search function. The default implementation uses Ollama LLM, but other methodology can be implemented as a replacement. The result of the query function is used by the search function.
+The query function takes an input from a Reddit post and generates a query string or questions to provide the search function. The default implementation uses Ollama LLM, but other methodology can be implemented as a replacement. The result of the query function is used by the search function.
 
 ### Search
 The search function takes an input from query function result and begins searching different search API's or LLMs for answers to the question. The search function is special in the fact that multiple search API's or LLMs may be used to provide context for an aggregate answer. The default implementation uses Ollama LLM and SearXNG/Arctic-Shift, but other methodology can be implemented as a replacement or addition. The result of the search function is used by the summary function.
