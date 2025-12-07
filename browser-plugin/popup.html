@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Reddit Duplicate Question Plugin</title>
+
+    <style>
+      :root {
+        --bg: #1a1a1a;
+        --card: #2a2a2a;
+        --text: #e6e6e6;
+        --accent: #ff4500; /* Reddit orange */
+        --accent-hover: #ff5722;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, sans-serif;
+        padding: 15px;
+        width: 230px;
+        margin: 0;
+      }
+
+      h3 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+
+      .card {
+        background: var(--card);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 6px rgba(0,0,0,0.3);
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 8px;
+        background: var(--accent);
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      button:hover {
+        background: var(--accent-hover);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h3>Reddit Duplicate Question Finder</h3>
+      <button id="runBtn">Run</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

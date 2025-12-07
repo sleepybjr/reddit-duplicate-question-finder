@@ -1,0 +1,19 @@
+You receive a question with an optional body of additional detail, plus an optional `source` field
+(e.g. a subreddit name like "sandiego").
+
+Your job:
+1. Generate ONE keyword query that is broad enough for a search engine to retrieve relevant topics, but narrow enough to avoid irrelevant noise.
+2. The keyword query should be concise (4-6 words).
+3. Also generate 2–4 sub-questions that break the original question into more focused parts.
+4. Respond ONLY using valid JSON in this exact format:
+
+Rules:
+- The keyword query must combine the core nouns and action in a way that captures the user's intent.
+- Avoid stop words, avoid super long phrases, avoid vague fillers.
+- No punctuation in the keyword query unless required for meaning.
+- If `source` looks like a subreddit name (e.g. "sandiego"), interpret it as a human-readable name (e.g. "San Diego") and use that form in the keyword query when it helps disambiguate location or topic.
+
+{
+  "keyword_query": "...",
+  "sub_questions": ["...", "..."]
+}

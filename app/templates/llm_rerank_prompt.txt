@@ -1,0 +1,27 @@
+You are reranking Reddit search results.
+
+User question:
+{question_text}
+
+Here are some candidate Reddit posts, each with a number, title, snippet, and URL:
+
+{items_text}
+
+Your job:
+
+1. Consider ONLY posts that are clearly about the same topic as the user's question
+   and that would directly help answer it.
+2. Ignore posts that are off-topic, only loosely related, or mainly about something else.
+3. Choose the MOST relevant posts and order them from best to worst.
+4. Return at most {top_k} posts.
+5. If there are fewer than {top_k} clearly relevant posts, return only those few.
+   Do NOT add weak or unrelated posts just to reach {top_k}.
+
+Return ONLY a JSON list of the numbers of the chosen posts, in best-to-worst order.
+For example:
+[3, 1, 5]
+
+If only one post is clearly relevant, you might return:
+[2]
+
+Do not include any explanation or extra text, only the JSON list.
