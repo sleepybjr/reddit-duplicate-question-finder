@@ -36,6 +36,8 @@ class SearXNGSearchProvider(SearchProvider):
 
             searx_results = data.get("results", [])
             
+            print(f"SearXNG returned {len(searx_results)} searx_results results.")
+            
             if not isinstance(searx_results, list):
                 searx_results = []
 
@@ -43,6 +45,8 @@ class SearXNGSearchProvider(SearchProvider):
                 question=question,
                 raw_results=searx_results,
             )
+            
+            print(f"SearXNG returned {len(top_raw)} top_raw results.")
 
             for item in top_raw:
                 url = item.get("url")

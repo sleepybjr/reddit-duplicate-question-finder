@@ -71,6 +71,8 @@ def fetch_top_level_comments(
     data = resp.json()
 
     comments = data.get("data", data)
+    print(f"ArcticShift returned {len(comments)} comments.")
+    
     if not isinstance(comments, list):
         comments = []
 

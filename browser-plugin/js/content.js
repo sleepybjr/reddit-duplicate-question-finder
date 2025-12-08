@@ -110,7 +110,7 @@ function buildPluginBox(bodyEl, final_summary, per_source_results) {
         htmlSummary = escapeHtml(cleanSummary).replace(/\n/g, "<br>");
     }
 
-    const iconUrl = browser.runtime.getURL("icon48.png");
+    const iconUrl = browser.runtime.getURL("icons/icon48.png");
 
     let html = `
     <div class="mb-xs">

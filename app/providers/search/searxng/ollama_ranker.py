@@ -37,7 +37,7 @@ def rerank_reddit_results(
         )
     items_text = "\n\n".join(items_text_lines)
 
-    template = load_template("reddit_rerank_prompt.txt")
+    template = load_template("llm_rerank_prompt.txt")
 
     prompt = template.format(
         question_text=question_text,
